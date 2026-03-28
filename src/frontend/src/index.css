@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Light mode - warm cream base */
+    --background: 0.98 0.005 80;
+    --foreground: 0.15 0.02 40;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 40;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 40;
+    --primary: 0.7 0.18 50;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.01 50;
+    --secondary-foreground: 0.15 0.02 40;
+    --muted: 0.94 0.01 50;
+    --muted-foreground: 0.5 0.03 40;
+    --accent: 0.55 0.22 25;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.53 0.22 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.02 60;
+    --input: 0.9 0.01 60;
+    --ring: 0.7 0.18 50;
+    --chart-1: 0.7 0.18 50;
+    --chart-2: 0.55 0.22 25;
+    --chart-3: 0.8 0.15 70;
+    --chart-4: 0.65 0.12 200;
+    --chart-5: 0.75 0.1 120;
+    --sidebar: 0.98 0.005 80;
+    --sidebar-foreground: 0.15 0.02 40;
+    --sidebar-primary: 0.7 0.18 50;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.01 50;
+    --sidebar-accent-foreground: 0.15 0.02 40;
+    --sidebar-border: 0.88 0.02 60;
+    --sidebar-ring: 0.7 0.18 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-chevron {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease forwards;
+}
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease forwards;
+}
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease forwards;
+}
+.animate-bounce-chevron {
+  animation: bounce-chevron 1.5s ease-in-out infinite;
+}
+
+.whatsapp-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  animation: pulse-ring 1.5s ease-out infinite;
+  z-index: -1;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(15, 10, 0, 0.7) 50%,
+    rgba(15, 10, 0, 0.85) 100%
+  );
+}
+
+.menu-tab-active {
+  background: oklch(0.7 0.18 50);
+  color: white;
+}
+
+.deal-card:hover .deal-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.section-divider {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    oklch(0.7 0.18 50),
+    transparent
+  );
+}
+
+/* Orange glow for primary buttons */
+.btn-orange {
+  background: oklch(0.7 0.18 50);
+  box-shadow: 0 4px 20px oklch(0.7 0.18 50 / 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px oklch(0.7 0.18 50 / 0.55);
+}
