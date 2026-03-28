@@ -62,7 +62,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/186w3V1Rdp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-ocid="footer.link"
@@ -72,7 +72,7 @@ export default function Footer() {
                 <SiFacebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/meetandeatjhang"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-ocid="footer.link"
