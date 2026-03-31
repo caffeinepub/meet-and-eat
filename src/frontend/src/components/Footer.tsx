@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import { SiFacebook, SiInstagram, SiWhatsapp } from "react-icons/si";
 
 const year = new Date().getFullYear();
@@ -91,6 +92,14 @@ export default function Footer() {
               >
                 <SiWhatsapp className="w-4 h-4" />
               </a>
+              <a
+                href="mailto:meetandeat52@gmail.com"
+                data-ocid="footer.link"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#F97316] flex items-center justify-center transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -171,6 +180,15 @@ export default function Footer() {
                 <span className="text-[#F97316]">⚠️</span> Complaints:{" "}
                 <a href="tel:+923160900910" className="hover:text-[#F97316]">
                   0316-0900910
+                </a>
+              </li>
+              <li>
+                <span className="text-[#F97316]">✉️</span>{" "}
+                <a
+                  href="mailto:meetandeat52@gmail.com"
+                  className="hover:text-[#F97316] transition-colors"
+                >
+                  meetandeat52@gmail.com
                 </a>
               </li>
             </ul>

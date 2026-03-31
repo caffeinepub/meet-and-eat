@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Clock, Loader2, MapPin, Phone } from "lucide-react";
+import { Clock, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useActor } from "../hooks/useActor";
@@ -64,7 +64,7 @@ export default function Contact() {
         </div>
 
         {/* Info cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-[#0f0a00] rounded-2xl p-6 text-center">
             <div className="w-12 h-12 bg-[#F97316]/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <MapPin className="w-6 h-6 text-[#F97316]" />
@@ -117,6 +117,22 @@ export default function Contact() {
               <span className="text-[#F97316] font-medium">
                 12:00 PM – Late Evening
               </span>
+            </p>
+          </div>
+          <div className="bg-[#0f0a00] rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 bg-[#F97316]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Mail className="w-6 h-6 text-[#F97316]" />
+            </div>
+            <h4 className="font-oswald font-bold text-white text-base mb-2">
+              Email Us
+            </h4>
+            <p className="text-white/60 font-poppins text-sm">
+              <a
+                href="mailto:meetandeat52@gmail.com"
+                className="hover:text-[#F97316] transition-colors break-all"
+              >
+                meetandeat52@gmail.com
+              </a>
             </p>
           </div>
         </div>
